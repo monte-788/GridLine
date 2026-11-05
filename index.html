@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>GRIDLINE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- TOP: stats (money, power, customers...) and the speed buttons -->
+  <div id="top">
+    <div id="stats"></div>
+    <div id="speed" class="chip"></div>
+  </div>
+
+  <!-- Current goal -->
+  <div id="goal"></div>
+
+  <!-- The game world. Everything inside is stacked on top of each other. -->
+  <div id="wrap">
+    <canvas id="game"></canvas>   <!-- the map is drawn here -->
+    <div id="card"></div>         <!-- info box when you select something -->
+    <div id="toast"></div>        <!-- short messages ("Not enough money") -->
+    <div id="panel"></div>        <!-- Finance / Customers / Goals window -->
+  </div>
+
+  <!-- BOTTOM: build tools, then the panel tabs -->
+  <div id="tools"></div>
+  <div id="tabs"></div>
+
+  <!-- The order of these scripts matters: each file may use the ones above it. -->
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/buildings.js"></script>
+  <script src="js/simulation.js"></script>
+  <script src="js/goals.js"></script>
+  <script src="js/rendering.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
